@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLAMES</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimione&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript' src='flames.js'></script>
     <style>
@@ -14,50 +14,11 @@
             padding: 20px;
         }
 
-        .my {
-            margin-left: 1%;
-            width: 40vw;
-            max-width: 100%;
-        }
-
         .top {
             font-family: 'Permanent Marker', cursive;
             font-size: 4rem;
             margin-top: 8%;
-            margin-left: 8%;
-        }
-
-        .i {
-            margin-top: 6%;
-            width: 100%;
-        }
-
-        .top-p {
-            color: #393e46;
             text-align: center;
-            margin-left: 8%;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        a {
-            color: #f76a8c;
-        }
-
-        h1 {
-            color: #f76a8c;
-        }
-
-        .btn {
-            margin-top: 5%;
-            margin-left: 5%;
-            border: none;
-            background-color: #f76a8c;
-            padding: 10px 20px;
-        }
-
-        .btn:hover {
-            background-color: #eb6383;
         }
 
         .def {
@@ -70,14 +31,13 @@
         input {
             border-radius: 5px;
             text-align: center;
-            margin-left: 4%;
             border: solid #f76a8c;
             color: #f76a8c;
             font-weight: bold;
             font-size: 1.5rem;
             height: 70px;
             padding: 10px;
-            width: calc(50% - 20px);
+            width: 45%; /* Adjusted width to maintain original size */
             margin-bottom: 10px;
         }
 
@@ -89,10 +49,10 @@
 
         #display_flame {
             margin-top: 2%;
-            margin-left: 8%;
             font-family: 'Permanent Marker', cursive;
             font-size: 4rem;
             padding: 20px;
+            text-align: center;
         }
 
         @media only screen and (max-width: 768px) {
@@ -104,12 +64,6 @@
                 background-size: 500px 800px;
             }
 
-            .btn {
-                margin-top: 5%;
-                margin-left: 5%;
-                padding: 5px 10px;
-            }
-
             input {
                 width: calc(100% - 20px);
             }
@@ -117,37 +71,36 @@
     </style>
 </head>
 <body>
-<div class="row i">
-    <div class="col-md-6">
-        <img class="my" src="luv.svg" alt="">
-    </div>
-    <div class="col-md-6">
-        <div class="main">
-            <h1 class="top">FLAMES Calculator</h1>
-        </div>
-        <form name=first>
-            <div class=" " id='maindiv'>
-                <div class='group'>
-                    <p class="def">Enter the names:</p>
-                    <input value='' name=name onkeyup=check(this) type=text class='txt' id='yname' placeholder="Your Name">
-                    <input value='' name=name1 onkeyup=check(this) type=text class='txt' id='pname' placeholder="Partner's Name">
-                    <div name=n1 id=nam1>Click the button to know the relationship status:</div>
-                    <div id='display_flame'></div>
-                </div>
-                <div class='but_por'>
-                    <button name=calculate type="button" onclick=calc() class="btn btn-secondary btn-lg">FLAMES</button>
-                    <button type=reset onclick='clear_all()' class="btn btn-secondary btn-lg">Reset</button>
-                    <span align='center' id="dumdiv"></span>
-                </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main">
+                <h1 class="top">FLAMES Calculator</h1>
             </div>
-            <div id='result' class='clearfix'>
-                <div class='group' align='center'>
-                    <div class='love_result'>
-                        <span name=n1 id=nam1></span>
+            <form name=first>
+                <div class=" " id='maindiv'>
+                    <div class='group'>
+                        <p class="def">Enter the names:</p>
+                        <input value='' name=name onkeyup=check(this) type=text class='txt' id='yname' placeholder="Your Name">
+                        <input value='' name=name1 onkeyup=check(this) type=text class='txt' id='pname' placeholder="Partner's Name">
+                        <div name=n1 id=nam1>Click the button to know the relationship status:</div>
+                        <div id='display_flame'></div>
+                    </div>
+                    <div class='but_por text-center'>
+                        <button name=calculate type="button" onclick=calc() class="btn btn-secondary btn-lg">FLAMES</button>
+                        <button type=reset onclick='clear_all()' class="btn btn-secondary btn-lg">Reset</button>
+                        <span align='center' id="dumdiv"></span>
                     </div>
                 </div>
-            </div>
-        </form>
+                <div id='result' class='clearfix'>
+                    <div class='group' align='center'>
+                        <div class='love_result'>
+                            <span name=n1 id=nam1></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 </body>
