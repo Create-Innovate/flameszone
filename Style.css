@@ -1,77 +1,78 @@
-body{
-    background-color: #FFFFFF;
-  }
-  .my{
-    margin-left: 1%;
-    width: 40vw;
-  }
-  .top{
-    font-family: 'Permanent Marker', cursive;
-    font-size: 4rem;
-    margin-top: 8%;
-    margin-left: 8%;
-  }
-  .i{
-    margin-top: 6%;
-    width: 99.7vw;
-  }
-  .top-p{
-    color: #393e46;
-    text-align: center;
-  margin-left: 8%;
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  text-align: center;
+}
+
+.top {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.group {
+  text-align: center;
+  display: flex; /* Add flexbox display */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.def {
+  color: #393e46;
   font-size: 1.5rem;
   font-weight: bold;
-  }
-  a{
-    color:#f76a8c;
-  }
-  h1{
-    color: #f76a8c;
-  }
-  .btn{
-    margin-top: 5%;
-    margin-left: 5%;
-    border: none;
-    background-color: #f76a8c;
-  }
-  .btn:hover{
-    background-color: #eb6383;
-  }
-  .def{
-    color: #393e46;
-    margin-left: 5%;
-    font-size: 1.5rem;
-    font-weight: bold;
-  
-  }
-  input{
-    border-radius: 5px;
-    text-align: center;
-  margin-left: 4%;
-    border: solid #f76a8c;
-    color: #f76a8c;
-    font-weight: bold;
-    font-size: 1.5rem;
-    height: 70px;
-  }
-  #nam1{
-    font-size: 1.5rem;
-  
-    color: #f76a8c;
-    margin-left: 5%;
-  }
-  #display_flame{
-    margin-top: 2%;
-    margin-left: 8%;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  border: none;
+  background-color: #f76a8c;
+  width: 45%; /* Adjust width of buttons */
+}
+
+.btn:hover {
+  background-color: #eb6383;
+}
+
+input {
+  border-radius: 5px;
+  text-align: center;
+  border: solid #f76a8c;
+  color: #f76a8c;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 70px;
+  width: 45%;
+  margin-bottom: 10px;
+  display: block; /* Ensure input fields are displayed as block elements */
+  margin-left: auto; /* Center align the input fields */
+  margin-right: auto; /* Center align the input fields */
+}
+
+#nam1 {
+  font-size: 1.5rem;
+  color: #f76a8c;
+}
+
+#display_flame {
+  margin-top: 20px;
   font-family: 'Permanent Marker', cursive;
-    font-size: 4rem;
+  font-size: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .top {
+      font-size: 2rem;
   }
-   @media only screen and (max-width:768px) {
-     .top{
-       font-size: 2rem;
-     }
-     body{
-       background-size: 500px 800px;
-     }
-   }
-  
+}
